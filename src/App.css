@@ -37,12 +37,26 @@
   }
 }
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-main {
-  flex: 1 0 auto;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.main-content {
+  flex: 1; /* This makes the content area grow to fill available space */
+}
+
+.page-footer {
+  background-color: #3f51b5;
+  padding: 20px;
+  color: white;
+  position: relative;
+  width: 100%;
+}
+

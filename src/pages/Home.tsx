@@ -41,6 +41,8 @@ export default function Home() {
           </tr>
         </tbody>
       </table>
+      <br></br>
+      <div className="center"><h5><a href="/login">Log in to search trips</a></h5></div>
     </>
   );
 }

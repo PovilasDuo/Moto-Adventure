@@ -7,7 +7,8 @@ import Header from "./components/Header";
 import Trips from "./components/Trips";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
-import Account from "./components/Account";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/trips/:id" element={<Trips />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Home />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
       <Footer />
