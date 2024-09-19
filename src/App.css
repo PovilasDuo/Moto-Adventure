@@ -24,6 +24,12 @@
   color: white;
 }
 
+.nav-wrapper {
+  background-color:"#333333";
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -37,7 +43,8 @@
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -49,14 +56,39 @@ html, body {
 }
 
 .main-content {
-  flex: 1; /* This makes the content area grow to fill available space */
+  flex: 1;
 }
 
 .page-footer {
-  background-color: #3f51b5;
-  padding: 20px;
+  background-color: #999999;
+  padding: 10px 20px;
   color: white;
-  position: relative;
-  width: 100%;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+@media (max-width: 768px) {
+  .page-footer {
+    padding: 5px 10px; /* Further reduce padding on smaller screens */
+    font-size: 0.9rem; /* Decrease font size */
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body {
+  height: 100vh !important;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

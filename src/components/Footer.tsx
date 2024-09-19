@@ -8,7 +8,8 @@ export default function Footer() {
               T120B178 Informacinių sistemų kūrimas karkasais
             </h5>
             <p className="grey-text text-lighten-4">
-              This site was created for the aforementioned university course module
+              This site was created for the aforementioned university course
+              module
             </p>
           </div>
           <div className="col l4 offset-l2 s12">
@@ -36,13 +37,11 @@ export default function Footer() {
       </div>
       <div className="footer-copyright">
         <div className="container">
-          © 2024 IFZm-1 Povilas Duoba
-          <a
-            className="grey-text text-lighten-4 right"
-            href="https://www.linkedin.com/in/povilas-duoba-64ab60290/"
-          >
-            LinkedIn
-          </a>
+          <p>
+            <a href="https://www.linkedin.com/in/povilas-duoba-64ab60290/">
+              © 2024 IFZm-1 Povilas Duoba
+            </a>
+          </p>
         </div>
       </div>
     </footer>

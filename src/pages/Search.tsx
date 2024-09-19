@@ -45,9 +45,9 @@ export default function Search() {
             </div>
           </div>
           <div className="center">
-            <a className="waves-effect waves-light btn-large" href="/trips">
+            <p><a className="waves-effect waves-light btn-large" href="/trips">
               SEARCH
-            </a>
+            </a></p>
           </div>
         </div>
       </div>
