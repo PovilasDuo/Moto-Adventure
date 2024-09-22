@@ -5,7 +5,7 @@ import { faMotorcycle, faHome, faSearch, faGasPump } from '@fortawesome/free-sol
 export default function Header() {
   return (
     <nav>
-      <div className="nav-wrapper" style={{backgroundColor:"#333333"}}>
+      <div className="nav-wrapper" style={{}}>
         <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
         <a href="/">Moto adventure <FontAwesomeIcon icon={faMotorcycle} /></a>
         </span>
