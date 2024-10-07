@@ -1,5 +1,5 @@
 export default function Footer() {
-  return (
+  const html = (
     <footer className="page-footer">
       <div className="container">
         <div className="row">
@@ -46,4 +46,5 @@ export default function Footer() {
       </div>
     </footer>
   );
+  return html;
 }

@@ -1,4 +1,4 @@
 export enum Endpoint {
-  TRIPS = "trips",
-  TRIPS_THIS_WEEK = "this-week"
+  TRIPS = "trip",
+  THIS_WEEK = "trip/this-week"
 }

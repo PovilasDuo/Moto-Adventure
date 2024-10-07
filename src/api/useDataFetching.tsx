@@ -8,7 +8,8 @@ function useFetch<T>(endpoint: Endpoint): T | null {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `http://localhost:8000/${endpoint}`;
+        const url = `http://localhost:8080/${endpoint}`;
+        console.log(url);
         const response = await axios.get<T>(url);
         setData(response.data);
       } catch (error) {

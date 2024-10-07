@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Trip from "./pages/Trip";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import CreateTrips from "./pages/CreateTrips";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/tris/:id" element={<Trip />} />
+            <Route path="/trips/:id" element={<Trip />} />
             <Route path="/search" element={<Search />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Home />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/trips/create" element={<CreateTrips />}></Route>
           </Routes>
         </BrowserRouter>
       </main>

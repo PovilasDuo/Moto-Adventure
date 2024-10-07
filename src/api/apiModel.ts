@@ -1,7 +1,6 @@
 export interface Trip {
-  startTime: Date;
+  startTime: string;
   startDate: string;
-  occured: number;
   location: string;
   id_Trip: number;
   fk_Userid_User: number;

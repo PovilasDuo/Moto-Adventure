@@ -5,7 +5,7 @@ import { Trip } from "../api/apiModel";
 
 export default function Trips() {
   const navigate = useNavigate();
-  const data = useFetch<Trip[]>(Endpoint.TRIPS_THIS_WEEK);
+  const data = useFetch<Trip[]>(Endpoint.THIS_WEEK);
 
   const handleRowClick = (id: number) => {
     navigate(`/trips/${id}`);
@@ -15,7 +15,7 @@ export default function Trips() {
     return <p>No trips available...</p>;
   }
 
-  return (
+  const html = (
     <>
       <h3 style={{ textAlign: "center" }}>This week's trips</h3>
       <table className="highlight centered container">
@@ -28,10 +28,14 @@ export default function Trips() {
         </thead>
         <tbody>
           {data.map((trip) => (
-            <tr key={trip.id_Trip} onClick={() => handleRowClick(trip.id_Trip)} style={{ cursor: "pointer" }}>
+            <tr
+              key={trip.id_Trip}
+              onClick={() => handleRowClick(trip.id_Trip)}
+              style={{ cursor: "pointer" }}
+            >
               <td>{trip.location}</td>
-              <td>{new Date(trip.startTime).toLocaleTimeString()}</td>
-              <td>{new Date(trip.startDate).toLocaleDateString()}</td>
+              <td>{trip.startTime}</td>
+              <td>{trip.startDate}</td>
             </tr>
           ))}
         </tbody>
@@ -44,4 +48,6 @@ export default function Trips() {
       </div>
     </>
   );
+
+  return html;
 }
