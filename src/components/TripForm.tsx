@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import M from "materialize-css";
 
-export default function TripFormn(){
-useEffect(() => {
+interface TripFormnProps {
+  header: string;
+}
+
+export default function TripForm({ header }: TripFormnProps) {
+  useEffect(() => {
     var dateElems = document.querySelectorAll(".datepicker");
     var timeElems = document.querySelectorAll(".timepicker");
 
@@ -20,31 +24,33 @@ useEffect(() => {
     });
   }, []);
 
-  const html = 
-  <>
-  <div className="container" style={{ margin: "6.4rem auto" }}>
-    <div className="row">
-      <div className="col s12">
-        <div className="input-field col s3">
-          <input id="date" type="text" className="datepicker" />
-          <label htmlFor="date">Select date</label>
-        </div>
-        <div className="input-field col s3">
-          <input id="time" type="text" className="timepicker" />
-          <label htmlFor="date">Select time</label>
-        </div>
-        <div className="input-field col s3">
-          <input id="startPoint" type="text" className="validate" />
-          <label htmlFor="first_name">Starting point</label>
-        </div>
+  const html = (
+    <>
+      <div className="container" style={{ margin: "6.4rem auto" }}>
+        <h3 className="center-align">{header}</h3>
+        <div className="row">
+          <div className="col s12">
+            <div className="input-field col s3">
+              <input id="date" type="text" className="datepicker" />
+              <label htmlFor="date">Select date</label>
+            </div>
+            <div className="input-field col s3">
+              <input id="time" type="text" className="timepicker" />
+              <label htmlFor="date">Select time</label>
+            </div>
+            <div className="input-field col s3">
+              <input id="startPoint" type="text" className="validate" />
+              <label htmlFor="startPoint">Starting point</label>
+            </div>
 
-        <div className="input-field col s3">
-          <input id="endPoint" type="text" className="validate" />
-          <label htmlFor="endPoint">End point</label>
+            <div className="input-field col s3">
+              <input id="endPoint" type="text" className="validate" />
+              <label htmlFor="endPoint">End point</label>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</>
+    </>
+  );
   return html;
 }

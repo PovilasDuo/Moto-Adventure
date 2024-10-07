@@ -1,10 +1,9 @@
-import TripFormn from "../components/TripForm";
+import TripForm from "../components/TripForm";
 
 export default function Search() {
   const html = (
     <>
-      <h3 className="center-align">Search trips</h3>
-      <TripFormn></TripFormn>
+      <TripForm header = "This week's trips"></TripForm>
       <div className="center">
         <p>
           <a className="waves-effect waves-light btn-large" href="/trips">
